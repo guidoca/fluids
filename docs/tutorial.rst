@@ -488,7 +488,7 @@ Mole fractions of each species are available as well.
 >>> atm.zs
 [0.7811046, 0.2095469, 0.009343, 5.2417e-06, 0.0, 0.0, 0.0]
 
-The horizontal wind models have almost the same API, and calculate wind speedAdd commentMore actions
+The horizontal wind models have almost the same API, and calculate wind speed
 and direction as a function of elevation, latitude, longitude, day of year and
 time of day. hwm93 can also take as an argument local geomagnetic conditions 
 and solar activity, but this effect was found to be so negligible it was removed

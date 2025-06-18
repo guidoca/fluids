@@ -1,4 +1,5 @@
 import glob
+import shutil
 import subprocess
 from pathlib import Path
 
@@ -22,14 +23,12 @@ def build_hwm14(hwm="hwm14"):
     )
     subprocess.run(["f2py", "-c", path_fluids / f"{hwm}.pyf", path_fluids / f"{hwm}.f90"], check=True)
     files = glob.glob( f"{hwm}.*.so")
-    print(files,path_fluids)
-    subprocess.run(["mv", Path() / files[0], path_fluids], check=True)
+    shutil.move(Path() / files[0], path_fluids  / files[0])
 
 def build_hwm93(hwm="hwm93"):
     subprocess.run(["f2py", "-c", path_fluids / f"{hwm}.pyf", path_fluids / f"{hwm}.for"], check=True)
     files = glob.glob(f"{hwm}.*.so")
-    print(files,path_fluids)
-    subprocess.run(["mv", Path() / files[0], path_fluids], check=True)
+    shutil.move(Path() / files[0], path_fluids  / files[0])
 
 
 def main():

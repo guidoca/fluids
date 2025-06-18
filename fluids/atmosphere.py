@@ -688,8 +688,6 @@ def hwm14(Z, latitude=0, longitude=0, day=0, seconds=0,
        and Space Science 2, no. 7 (July 1, 2015): 2014EA000089.
        doi:10.1002/2014EA000089.
     '''
-    # Needed by hwm14
-    os.environ["HWMPATH"] = os.path.join(os.path.dirname(__file__), 'optional')
     try:
         try:
             from fluids.optional import hwm14
