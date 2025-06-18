@@ -48,9 +48,9 @@ python module hwm14 ! in
                 integer(kind=4) intent(in) :: nmax
                 integer(kind=4) intent(in) :: mmax
                 real(kind=8) intent(in) :: theta
-                real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(mmax,nmax) :: p
-                real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(mmax,nmax) :: v
-                real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(mmax,nmax) :: w
+                real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(nmax,mmax) :: p
+                real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(nmax,mmax) :: v
+                real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(nmax,mmax) :: w
             end subroutine alfbasis
             subroutine initalf(nmaxin,mmaxin) ! in :hwm14:/tools/fluids/fluids/optional/hwm14.f90:alf
                 integer(kind=4) intent(in) :: nmaxin
